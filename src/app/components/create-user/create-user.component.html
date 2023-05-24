@@ -1,0 +1,52 @@
+<form (submit)="createUser()" ngNativeValidate>
+  <div class="row g-2">
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInputGridName"
+          placeholder="Name"
+          required
+          name="floatingInputGridName"
+          [(ngModel)]="model.name"
+        />
+        <label for="floatingInputGridName">Name</label>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="email"
+          class="form-control"
+          id="floatingInputGridEmail"
+          placeholder="mail"
+          required
+          name="floatingInputGridEmail"
+          [(ngModel)]="model.email"
+        />
+        <label for="floatingInputGridEmail">Email</label>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="tel"
+          class="form-control"
+          id="floatingInputGridPhone"
+          placeholder="Phone"
+          required
+          name="floatingInputGridPhone"
+          [(ngModel)]="model.phone"
+          #floatingInputGridPhone="ngModel"
+        />
+        <label for="floatingInputGridPhone">Phone</label>
+      </div>
+    </div>
+  </div>
+  <div class="row my-2">
+    <div class="w-auto ms-auto">
+      <button class="btn btn-primary">Create</button>
+    </div>
+  </div>
+</form>
